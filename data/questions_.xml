@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questions>
+  <question minutes="1" points="5">
+    <text>What was Mozart's name?</text>
+    <variants>
+      <variant  right="true">Wolfgang</variant>
+      <variant>Mike</variant>
+      <variant>Bob</variant>
+      <variant>Ibragim</variant>
+    </variants>
+  </question>
+  <question minutes="1" points="3">
+    <text>Who was born in the forest and was green?</text>
+    <variants>
+      <variant right="true">spruce</variant>
+      <variant>birch</variant>
+      <variant">baobab</variant>
+      <variant>segovia</variant>
+    </variants>
+  </question>
+  <question minutes="1" points="10">
+    <text>What city was Shakespeare born in?</text>
+    <variants>
+      <variant right="true">Stratford-upon-Avon</variant>
+      <variant>London</variant>
+      <variant">Moscow</variant>
+      <variant>Paris</variant>
+    </variants>
+  </question>
+  <question minutes="1" points="1">
+    <text>How many days in a year?</text>
+    <variants>
+      <variant right="true">365</variant>
+      <variant>200</variant>
+      <variant">1000</variant>
+      <variant>7</variant>
+    </variants>
+  </question>
+  <question minutes="1" points="8">
+    <text>What is the tallest tree in the world</text>
+    <variants>
+      <variant right="true">sequoia</variant>
+      <variant>birch</variant>
+      <variant">baobab</variant>
+      <variant>spruce</variant>
+    </variants>
+  </question>
+</questions>
