@@ -3,7 +3,7 @@
   <question minutes="1" points="5">
     <text>"What was Mozart's name?"</text>
     <variants>
-      <variant right="true">"Wolfgang"</variant>
+      <variant right="true">Wolfgang</variant>
       <variant>Mike</variant>
       <variant>Bob</variant>
       <variant>Ibragim</variant>

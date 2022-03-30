@@ -8,9 +8,24 @@ scores = 0
 questions.each do |question|
   puts question.question
 
-  user_unswer = gets.chomp.downcase
+  question.variants.shuffle!.each_with_index do |variant, index|
+    puts "#{index + 1} #{variant}"
+  end
 
-  if question.answer == user_unswer
+  starttime = Time.new
+
+  user_variant = gets.to_i
+  user_answer = question.variants[user_variant - 1]
+
+  endtime = Time.new
+
+  alltime = endtime - starttime
+  if alltime > (question.minutes * 60)
+    puts 'Did not have time. End game'
+    abort
+  end
+
+  if question.answer == user_answer
     scores += question.points
     puts 'Well'
   else
