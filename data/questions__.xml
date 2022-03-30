@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<questions>
+  <question>
+    <text>What was Mozart's name?</text>
+  </question>
+  <question minutes="1" points="3">
+    <text>What was Haiden's name?</text>
+  </question>
+  </questions>
