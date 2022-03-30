@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <questions>
   <question minutes="1" points="5">
-    <text>What was Mozart's name?</text>
+    <text>"What was Mozart's name?"</text>
     <variants>
-      <variant right="true">Wolfgang</variant>
+      <variant right="true">"Wolfgang"</variant>
       <variant>Mike</variant>
       <variant>Bob</variant>
       <variant>Ibragim</variant>

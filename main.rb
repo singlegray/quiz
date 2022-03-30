@@ -11,11 +11,11 @@ questions.each do |question|
   user_unswer = gets.chomp.downcase
 
   if question.answer == user_unswer
-    scores += question.score
+    scores += question.points
     puts 'Well'
   else
     puts "Well answer is #{question.answer}"
   end
 end
 
-#puts "You score #{scores}"
+puts "You score #{scores}"

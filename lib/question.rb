@@ -13,11 +13,10 @@ class Question
       points = item.attributes["points"]
       text = item.elements["text"].first
       variants = []
+      answer = ""
       item.elements.each("variants/variant") do |variant|
-        binding.irb
-        variants << variant.elements["variant"].first
-        
-        answer = variant.elements["variant"].first if item.attributes["right"] == "true"
+        variants << variant.text
+        answer = variant.text if variant.attributes["right"] == "true"
       end
       questions << self.new(text, answer, points, minutes, variants)
     end
