@@ -1,31 +1,29 @@
 require_relative 'lib/question'
-require 'rexml/document'
+require 'timeout'
 
 questions = Question.from_file
 
 scores = 0
 
 questions.each do |question|
-  puts question.question
+  puts question.text_question
 
-  question.variants.shuffle!.each_with_index do |variant, index|
+  question.variants.each_with_index do |variant, index|
     puts "#{index + 1} #{variant}"
   end
 
-  starttime = Time.new
+  user_variant = ''
 
-  user_variant = gets.to_i
-  user_answer = question.variants[user_variant - 1]
-
-  endtime = Time.new
-
-  alltime = endtime - starttime
-  if alltime > (question.minutes * 60)
-    puts 'Did not have time. End game'
-    abort
+  begin
+    Timeout::timeout(question.minutes) do
+      user_variant = gets.to_i
+    end
+  rescue Timeout::Error
+    puts "\nDid not have time. End game"
+    break
   end
 
-  if question.answer == user_answer
+  if question.right_answer?(user_variant)
     scores += question.points
     puts 'Well'
   else
