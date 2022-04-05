@@ -1,7 +1,8 @@
 require_relative 'lib/question'
+require_relative 'lib/question_constructor'
 require 'timeout'
 
-questions = Question.from_file
+questions = Question_Constructor.from_file
 
 scores = 0
 
